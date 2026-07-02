@@ -599,6 +599,7 @@ const ProductCard = ({ product }) => {
                               stock: result.data.stock,
                             }));
                             toast({
+                              id: "restock-success",
                               title: `Restocked +${amount}`,
                               status: "success",
                               duration: 2000,
@@ -606,6 +607,7 @@ const ProductCard = ({ product }) => {
                             });
                           } else {
                             toast({
+                              id: "restock-error",
                               title: "Restock failed",
                               description: result.message,
                               status: "error",
